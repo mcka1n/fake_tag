@@ -24,7 +24,7 @@ module FakeTag
     def loop amount
       result = []
       tags = self.tag_pool
-      amount.times do
+      while result.length < amount do
         data = tags[rand(0..tags.count-1)]
         result << data unless result.include? data
       end
