@@ -17,7 +17,7 @@ module FakeTag
     def tag_pool
       # TODO change this for something better (dynamic tags)
       ['v60', 'lipstick', 'nails', 'blackwidow', 'skateboard', 'happy',
-        'selfie', 'bike', 'car', 'dress', 'computer', 'geekstuff', 'love'
+        'selfie', 'bike', 'car', 'dress', 'computer', 'geekstuff', 'love',
         'android', 'ipad', 'nyc']
     end
 
