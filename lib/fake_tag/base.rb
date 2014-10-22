@@ -14,6 +14,11 @@ module FakeTag
       result
     end
 
+    def generate_tag_test amount = 1
+      self.generate_tag amount
+    end
+
+
     protected
 
     def tag_pool
@@ -53,6 +58,16 @@ module FakeTag
       result
     end
 
+    def generate_tag keyword='', amount=4, key='xxxx'
+      #TODO: Make it random
+      uri = 'http://api.whatthetrend.com/api/trend/search_extended/json?api_key='+key.to_s+'&count='+amount.to_s+'&q='+keyword.to_s
+      result = []
+      data = JSON.parse(RestClient.get(uri))
+      for slug in data["api"]["trends"]["trend"]
+        result << slug["name"]
+      end
+      result
+    end
 
   end
 end

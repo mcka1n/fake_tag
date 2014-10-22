@@ -4,6 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fake_tag/version'
 require 'open-uri'
 require 'nokogiri'
+require 'rest-client'
+require 'json'
 
 Gem::Specification.new do |spec|
   spec.name          = "fake_tag"
