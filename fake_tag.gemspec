@@ -6,6 +6,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'rest-client'
 require 'json'
+require 'httparty'
 
 Gem::Specification.new do |spec|
   spec.name          = "fake_tag"
@@ -25,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "nokogiri"
+  spec.add_development_dependency "httparty"
 end
